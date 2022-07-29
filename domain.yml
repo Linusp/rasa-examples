@@ -1,0 +1,115 @@
+intents:
+  - faq
+  - chitchat
+  - request_restaurant
+
+entities:
+  - cuisine
+  - number
+
+slots:
+  cuisine:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: cuisine
+  num_people:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: number
+
+forms:
+  restaurant_form:
+    ignored_intents:
+      - faq
+      - chitchat
+    required_slots:
+      - cuisine
+      - num_people
+
+responses:
+  utter_ask_restaurant_form_cuisine:
+    - text: 请问您喜欢什么菜系
+    - text: 请问您要订什么口味的餐厅
+
+  utter_ask_restaurant_form_num_people:
+    - text: 请问就餐的一共多少位
+
+  utter_submit_restaurant_form:
+    - text: 您的要求我们清楚了，之后会帮您安排好哈
+
+  utter_chitchat/thank:
+    - text: 不客气
+    - text: 不客气呢!
+    - text: 不客气哈
+    - text: 么么哒不客气哦
+
+  utter_chitchat/hi:
+    - text: 你好
+    - text: 在的
+    - text: 在的呢
+    - text: 在的哦
+    - text: 在的哦。
+    - text: 您请说哦
+    - text: 有什么可以帮您
+
+  utter_faq/1594357703:
+  - text: '国务院办公厅将对收到的问题线索和意见建议进行汇总整理，督促有关地方、部门及时处理。对涉及缓报、瞒报、漏报疫情，落实防控措施不力，导致疫情扩散等严重后果的重要问题线索，国务院办公厅督查室将直接派员进行督查。经查证属实的，将依法依规严肃处理。
+
+      关于疫情防控，有问题线索和意见建议，可通过“国务院客户端”小程序留言。点击下方参考链接可进入。
+
+
+      来源：中国政府网
+
+      参考链接：https://mp.weixin.qq.com/s/s4zZW7denDt-hGEmws1ugQ'
+  utter_faq/1594918072:
+  - text: '疫情期间坚持锻炼来提高抵抗力，这个观点是对的，播散期的患者或疑似患者，
+
+      应该积极隔离治疗，一定不要外出。
+
+      身体健康的人，尽量不出门，尽量减少去人多密集的地方，
+
+      并且不要在外面停留过多时间。
+
+
+      来源：《百科名医蒲公英医学百科》
+
+      详细参考链接：https://m.baikemy.com/video/57275140821505'
+  utter_faq/243791602:
+  - text: '冠状病毒对物理化学因素的抵抗力不强，对紫外线和热敏感。56℃ 30分钟、乙醚、75%浓度的医用酒精、含氯消毒剂（84消毒液）、过氧乙酸和氯仿等脂溶剂均可有效灭活病毒，氯己定不能有效灭活病毒。
+
+      【消毒前请仔细阅读产品说明书；75%的酒精易燃易爆，使用时请注意明火】
+
+
+      来源：《协和新型冠状病毒肺炎防护手册》
+
+      参考链接：http://pumcp.com/portal/sites/xiehe/pages/books/7/index.html#6'
+  utter_faq/400143727:
+  - text: '密切接触者或可疑暴露者必须进行医学观察。医学观察包括居家隔离医学观察和集中隔离医学观察。目前，各地主要采取的是居家隔离医学观察。医学观察期限为被观察对象自最后一次与病例发生无有效防护的接触或可疑暴露后14天。观察期满未发病者可恢复正常的学习、工作和生活。
+
+
+      来源：中国疾病预防控制中心《新型冠状病毒感染的肺炎公众防护指南》
+
+      参考链接：https://mp.weixin.qq.com/s/25lbhMV8mxOFEwYl0nFRkg'
+  utter_faq/975000443:
+  - text: '可以用酒精擦一擦外包装。
+
+
+      宅在家里难免需要叫外卖，收到快递也不可能一直不去拿。但很多人担心，外卖小哥快递小哥每天在社区间奔波，接触很多住户，万一携带了病毒，而自己拿到外卖，也增加了沾上病毒的风险。
+
+      如果担心外卖和快递带来的间接接触，可以让外卖小哥放在门口，等他走了再拿进屋（双方都少接触一个人，都安全）；或佩戴口罩接收外卖，再用酒精擦一擦包装袋，洗手以后再打开吃。
+
+
+      至于快递，不同的病毒在人体外的存活时间是不一样的，快递在运送过程中沾染的病毒早已死亡。但在投递 / 配送近期沾染的病毒可能仍然存活。收到后也可以直接用酒精擦拭外包装，降低风险。
+
+
+      来源：丁香医生
+
+      链接：https://mp.weixin.qq.com/s/DP4nVgYs_a5QoBwPNhYl4Q'
+  utter_please_rephrase:
+  - text: 抱歉我没有理解您的意思
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
+version: '3.1'
