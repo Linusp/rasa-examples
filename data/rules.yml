@@ -31,3 +31,8 @@ rules:
       - slot_was_set:
           - requested_slot: null
       - action: utter_submit_restaurant_form
+
+  - rule: Roll Dice
+    steps:
+      - intent: roll_dice
+      - action: action_roll_dice

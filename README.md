@@ -17,6 +17,12 @@ rasa train
 
 ## 使用
 
+- 启动 Actions Server
+
+  ```
+  rasa run actions
+  ```
+
 - 交互式使用:
 
   ```shell

@@ -1,7 +1,11 @@
+actions:
+  - action_roll_dice
+
 intents:
   - faq
   - chitchat
   - request_restaurant
+  - roll_dice
 
 entities:
   - cuisine
